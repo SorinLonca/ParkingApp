@@ -88,6 +88,16 @@ angular.module('starter', ['ionic', 'starter.chat.module', 'starter.chat.detail.
         controller: 'LoginCtrl'
       }
     }
+  })
+
+  .state('tab.main', {
+    url: '/main',
+    views: {
+      'tab-main': {
+        templateUrl: 'templates/main.html'
+        //controller: 'MainCtrl'
+      }
+    }
   });
 
   // if none of the above states are matched, use this as the fallback
