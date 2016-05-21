@@ -1,1 +1,6 @@
 /* Empty. Add your own CSS if you like */
+#login_button {
+	position: absolute;
+	display: block;
+	margin-left: 2000000px;
+}
