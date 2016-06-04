@@ -1,23 +1,13 @@
-<ion-view view-title="Parking-Cluj">
+<ion-view view-title="Login" name="login-view">
   <ion-content class="padding">
-    <div class="list">
-	  <label class="item item-input">
-	    <span class="input-label">Username</span>
-	    <input type="text">
-	  </label>
-	  <label class="item item-input">
-	    <span class="input-label">Password</span>
-	    <input type="password">
-	  </label>
-	</div>
-	<button class="button button-calm button-block">
-	  Login
-	</button>
-	<button class="icon icon-left ion-social-facebook button button-positive button-block">
-		Login with Facebook
-	</button>
-	<center>
-		<a href="http://localhost:8100/#/tab/main">Create an account</a>
-	</center>
+      <div class="list list-inset">
+          <label class="item item-input">
+              <input type="text" placeholder="Username" ng-model="data.username">
+          </label>
+          <label class="item item-input">
+              <input type="password" placeholder="Password" ng-model="data.password">
+          </label>
+      </div>
+      <button class="button button-block button-calm" ng-click="login()">Login</button>
   </ion-content>
 </ion-view>

@@ -6,7 +6,7 @@
 // 'starter.services' is found in services.js
 // 'starter.controllers' is found in controllers.js
 angular.module('starter', ['ionic', 'starter.chat.module', 'starter.chat.detail.module',
-    'starter.account.module', 'starter.dash.module', 'starter.login.module', 'starter.chats.services'])
+    'starter.account.module', 'starter.dash.module', 'starter.login.module', 'starter.login.services'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
