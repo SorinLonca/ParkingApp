@@ -1,7 +1,16 @@
-<ion-view view-title="Register">
-	<ion-content class="padding">
-		<div class="bar bar-header item-input-inset">
-		
-		</div>
-	</ion-content>
+<ion-view view-title="Parking-Cluj" name="register-view">
+  <ion-content class="padding">
+      <div class="list list-inset">
+          <label class="item item-input">
+              <input type="text" placeholder="Username" ng-model="data.username">
+          </label>
+          <label class="item item-input">
+              <input type="password" placeholder="Password" ng-model="data.password">
+          </label>
+          <label class="item item-input">
+              <input type="text" placeholder="Email" ng-model="data.email">
+          </label>
+      </div>
+      <button class="button button-block button-calm" ng-click="register()">Registration</button>
+  </ion-content>
 </ion-view>

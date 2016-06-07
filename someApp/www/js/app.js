@@ -104,7 +104,7 @@ angular.module('starter', ['ionic', 'starter.chat.module', 'starter.chat.detail.
     url: '/register',
     views: {
       'tab-register': {
-        templateUrl: 'templates/tab-register.html'
+        templateUrl: 'templates/register.html'
         //controller: 'AccountCtrl'
       }
     }
