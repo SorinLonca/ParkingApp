@@ -29,7 +29,8 @@ angular.module('starter.login.module', [])
 
 .controller('LoginCtrl', function($scope, LoginService, $ionicPopup, $state) {
     $scope.data = {};
- 
+    //are height in css daca vrei mai mare
+    $scope.map = { center: { latitude: 46, longitude: 23 }, zoom: 8 };
     $scope.login = function() {
         LoginService.loginUser($scope.data.username, $scope.data.password).success(function(data) {
             $state.go('tab.main');
