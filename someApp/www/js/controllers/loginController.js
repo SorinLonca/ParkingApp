@@ -5,7 +5,7 @@ angular.module('starter.login.module', [])
         loginUser: function(name, pw) {
             var deferred = $q.defer();
             var promise = deferred.promise;
- 
+
             if (name == 'admin' && pw == 'admin') {
                 deferred.resolve('Welcome ' + name + '!');
                 //console.log("LOGIN user: " + $scope.data.username + " - PW: " + $scope.data.password);
@@ -30,7 +30,7 @@ angular.module('starter.login.module', [])
 .controller('LoginCtrl', function($scope, LoginService, $ionicPopup, $state) {
     $scope.data = {};
     //are height in css daca vrei mai mare
-    $scope.map = { center: { latitude: 46, longitude: 23 }, zoom: 8 };
+    $scope.map = { center: { latitude: 46.766667, longitude: 23.58333300000004 }, zoom: 15 };
     $scope.login = function() {
         LoginService.loginUser($scope.data.username, $scope.data.password).success(function(data) {
             $state.go('tab.main');
