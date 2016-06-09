@@ -6,7 +6,7 @@
 // 'starter.services' is found in services.js
 // 'starter.controllers' is found in controllers.js
 angular.module('starter', ['ionic', 'starter.chat.module', 'uiGmapgoogle-maps', 'starter.chat.detail.module',
-    'starter.account.module', 'starter.dash.module', 'starter.login.module', 'starter.login.services'])
+    'starter.account.module', 'starter.dash.module', 'starter.login.module', 'starter.login.services','starter.main.module'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -94,8 +94,8 @@ angular.module('starter', ['ionic', 'starter.chat.module', 'uiGmapgoogle-maps', 
     url: '/main',
     views: {
       'tab-main': {
-        templateUrl: 'templates/main.html'
-        //controller: 'MainCtrl'
+        templateUrl: 'templates/main.html',
+        controller: 'MainCtrl'
       }
     }
   })
