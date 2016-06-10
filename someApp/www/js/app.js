@@ -105,7 +105,15 @@ angular.module('starter', ['ionic', 'starter.chat.module', 'uiGmapgoogle-maps', 
     views: {
       'tab-register': {
         templateUrl: 'templates/register.html'
-        //controller: 'AccountCtrl'
+      }
+    }
+  })
+
+  .state('tab.details', {
+    url: '/details',
+    views: {
+      'tab-details': {
+        templateUrl: 'templates/details.html'
       }
     }
   });

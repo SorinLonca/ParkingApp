@@ -4,6 +4,7 @@ angular.module('starter.main.module', [])
     $scope.data = {};
     //are height in css daca vrei mai mare
     $scope.map = { center: { latitude: 46.766667, longitude: 23.58333300000004 }, zoom: 15 };
+    $scope.marker = { position: { latitude: 46.766667, longitude: 23.58333300000004 } };
     $scope.login = function() {
         LoginService.loginUser($scope.data.username, $scope.data.password).success(function(data) {
             $state.go('tab.main');

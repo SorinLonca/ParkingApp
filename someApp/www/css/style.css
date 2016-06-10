@@ -6,3 +6,15 @@
 }
 
 .angular-google-map-container { height: 400px; }
+
+.float-right {
+	float: right;
+}
+
+.clear {
+	clear: both;
+}
+
+.overflow {
+	overflow: hidden;
+}
