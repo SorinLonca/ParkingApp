@@ -7,15 +7,23 @@ angular.module('starter.login.module', [])
     $scope.login = function() {
       var url = 'ceva url';
       var data = $scope.data;
-      console.log('data', data);
-        LoginService.create(url, data)
-          .success(function(data) {
-            $state.go('tab.main');
-        }).error(function(data) {
-            var alertPopup = $ionicPopup.alert({
+      if (data.username=="admin" && data.password=="admin"){
+        $state.go('tab.main');
+      }
+      else{
+        var alertPopup = $ionicPopup.alert({
                 title: 'Login failed!',
                 template: 'Please check your username and password!'
-            });
         });
+      }
+        // LoginService.create(url, data)
+        //   .success(function(data) {
+        //     $state.go('tab.main');
+        // }).error(function(data) {
+        //     var alertPopup = $ionicPopup.alert({
+        //         title: 'Login failed!',
+        //         template: 'Please check your username and password!'
+        //     });
+        // });
     }
 })
