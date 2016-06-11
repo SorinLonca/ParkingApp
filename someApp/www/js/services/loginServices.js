@@ -1,27 +1,26 @@
 angular.module('starter.login.services', [])
 
-.service('LoginService', function($q) {
-    return {
-        loginUser: function(name, pw) {
-            var deferred = $q.defer();
-            var promise = deferred.promise;
- 
-            if (name == 'admin' && pw == 'admin') {
-                deferred.resolve('Welcome ' + name + '!');
-            } else {
-                deferred.reject('Wrong credentials.');
-            }
-            promise.success = function(fn) {
-                promise.then(fn);
-                return promise;
-            }
-            promise.error = function(fn) {
-                promise.then(null, fn);
-                return promise;
-            }
-            return promise;
-        }
+.factory('LoginService', LoginService);
+
+  LoginService.$inject = ['$http'];
+
+  function LoginService($http) {
+    var factory = {};
+
+    factory.create = function(url, data) {
+      var action = $http.post(url, data);
+      return action;
+    };
+
+    factory.update = function(url, data) {
+      var action = $http.put(url, data);
+      return action;
+    };
+
+    factory.get = function(url) {
+      var action = $http.get(url);
+      return action;
     }
-})
 
-
+    return factory;
+  }
