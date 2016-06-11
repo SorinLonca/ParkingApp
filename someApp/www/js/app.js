@@ -70,15 +70,15 @@ angular.module('starter', ['ionic', 'starter.chat.module', 'uiGmapgoogle-maps', 
   //     }
   //   })
 
-  .state('tab.account', {
-    url: '/account',
-    views: {
-      'tab-account': {
-        templateUrl: 'templates/tab-account.html',
-        controller: 'AccountCtrl'
-      }
-    }
-  })
+  // .state('tab.account', {
+  //   url: '/account',
+  //   views: {
+  //     'tab-account': {
+  //       templateUrl: 'templates/tab-account.html',
+  //       controller: 'AccountCtrl'
+  //     }
+  //   }
+  // })
 
   .state('tab.login', {
     url: '/login',
@@ -105,7 +105,24 @@ angular.module('starter', ['ionic', 'starter.chat.module', 'uiGmapgoogle-maps', 
     views: {
       'tab-register': {
         templateUrl: 'templates/register.html'
-        //controller: 'AccountCtrl'
+      }
+    }
+  })
+
+  .state('tab.details', {
+    url: '/details',
+    views: {
+      'tab-details': {
+        templateUrl: 'templates/details.html'
+      }
+    }
+  })
+
+    .state('tab.options', {
+    url: '/options',
+    views: {
+      'tab-details': {
+        templateUrl: 'templates/options.html'
       }
     }
   });
